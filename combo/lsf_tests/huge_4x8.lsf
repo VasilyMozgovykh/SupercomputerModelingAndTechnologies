@@ -1,0 +1,7 @@
+#BSUB -n 4
+#BSUB -J "prog_combo"
+#BSUB -o "bsub_results/combo/fout_1200x800_4x8_%J.txt"
+#BSUB -e "bsub_results/combo/ferr_1200x800_4x8_%J.txt"
+#BSUB -R "affinity[core(8)]"
+OMP_NUM_THREADS=8
+mpiexec ./prog_combo 1200 800

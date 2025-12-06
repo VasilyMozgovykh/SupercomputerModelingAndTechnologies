@@ -1,7 +1,7 @@
 #BSUB -n 2
 #BSUB -J "prog_combo"
-#BSUB -o "bsub_results/combo/fout_1200x800_2x1_%J.txt"
-#BSUB -e "bsub_results/combo/ferr_1200x800_2x1_%J.txt"
+#BSUB -o "bsub_results/combo/fout_600x400_2x1_%J.txt"
+#BSUB -e "bsub_results/combo/ferr_600x400_2x1_%J.txt"
 #BSUB -R "affinity[core(1)]"
 OMP_NUM_THREADS=1
-mpiexec ./prog_combo 1200 800
+mpiexec ./prog_combo 600 400
